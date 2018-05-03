@@ -262,8 +262,7 @@ get_crypto_type(const char *method)
 }
 
 
-int
-wm_signal_init(void)
+int wm_signal_init(void)
 {
 	if (g_mode != 0) {
 		printf("Program is already running\n");
@@ -297,8 +296,7 @@ wm_signal_init(void)
 }
 
 
-void
-wm_signal_deinit(void)
+void wm_signal_deinit(void)
 {
 	pthread_mutex_destroy(&g_wm_func_mutex);
 	pthread_cond_destroy(&g_wm_func_cond);
